@@ -1,0 +1,168 @@
+:root{
+    --vermelho:#e50914;
+    --preta:#141414;
+    --amarelo:#f7f7c8;
+    --rosa: #f6d8e0;
+    --azul: #afddec;
+    --lilas: #dfb8df;
+    --cinza: #e7ececda;
+    
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body{
+   background: var(--lilas);
+   font-family: 'Arial', Times, serif;
+   color:white;
+}
+
+
+header .container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header .logo{
+    margin-left: 5px;
+    background: -webkit-linear-gradient(right, red, orange, yellow, LimeGreen, DodgerBlue, DarkViolet);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:50px;
+}
+
+header nav a{
+    text-decoration:none;
+    color: var(--amarelo);
+    margin-right: 10px;
+    font-family: 'Arial';
+}
+
+header nav a:hover{
+    color:var(--azul);
+
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size:16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/style/img/eupho.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    height:450px;
+    background-size:cover;
+ 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.botao{
+    background-color:rgba(0,0,0,.50);
+    border: none;
+    color:whitesmoke;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 2s ease all;;
+    border-radius: 4px;
+}
+
+.botao:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+}
+.filme-principal .container{
+    width: 60%;
+
+}
+
+.carrosel-filmes{
+    margin-top: 3px;
+}
+
+
+.item:hover img{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.item{
+    overflow: hidden;
+    transition: 0.8s;
+    cursor: pointer;
+}
+.item img{
+    transform: scale(1);
+    transition: 0.8s;
+}
+
+nav a{
+    position:relative;
+    transition: 0.4s;
+}
+
+nav a::after{
+    content: "";
+    position:absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--azul);
+    display: block;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+nav a:hover::after{
+    width: 100%;
+    transition: 0.4s;
+
+}
+
+header{
+    position: fixed;
+    top:0%;
+    width: 100%;
+    background-color: var(--lilas);
+}
+
+a img{
+    border-radius: 15px;
+}
